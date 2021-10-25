@@ -77,7 +77,7 @@ echo "Step 3b of Analysis Completed" >> $logfile
 
 
 
-
+echo "WES Analysis Completed" >> $logfile
 
 
 
