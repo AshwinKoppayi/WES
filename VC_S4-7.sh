@@ -1,17 +1,16 @@
-#!/bin/bash
-#PBS -N Batch_16S4-7
+#PBS -N  Script_Name
 #PBS -S /bin/bash
 #PBS -l walltime=96:00:00
 #PBS -l nodes=1:ppn=8
 #PBS -l mem=40gb
-#PBS -d /scratch/akoppayi/process/16_Batch
-#PBS -o /scratch/akoppayi/process/16_Batch/logfiles/Out_16Batch4-7.out
-#PBS -e /scratch/akoppayi/process/16_Batch/logfiles/Err_16Batch4-7.err
+#PBS -d /path/to/current/directory
+#PBS -o /path/to/logfiles/log.out
+#PBS -e /path/to/logfiles/log.err
 
 module load gcc/6.2.0
 module load samtools/1.9
 
-logfile="/scratch/akoppayi/process/16_Batch/logfiles/step4.txt"
+logfile="/path/to/logfiles/log.txt"
 echo "WES Analysis" > $logfile
 echo "Step 4 of Analysis Started" >> $logfile
 COUNT=0 
