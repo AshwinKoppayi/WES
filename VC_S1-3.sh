@@ -1,17 +1,18 @@
+#PBS -N Script_Name
 #PBS -S /bin/bash
 #PBS -l walltime=96:00:00
 #PBS -l nodes=1:ppn=8
-#PBS -l mem=40gb
-#PBS -o /scratch/akoppayi/process/16_Batch/Batch_16log.out
-#PBS -e /scratch/akoppayi/process/16_Batch/Batch_16log.err
-#PBS -d /scratch/akoppayi/process/16_Batch 
+#PBS -l mem=100gb
+#PBS -o /path/to/logfiles/log.out
+#PBS -e /path/to/logfiles/log.err
+#PBS -d /path/to/current/directory 
 
 
 module load java-jdk/1.8.0_92
 module load picard/2.8.1
 
 
-logfile="/scratch/akoppayi/process/16_Batch/Batch16LogFile.txt"
+logfile="/path/to/LogFile.txt"
 echo "WES Analysis" > $logfile
 echo "Step 1  of Analysis Started" >> $logfile
 COUNT=0
